@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simpleTransportationLineDSL:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simpleTransportationLineDSL="http://www.example.org/simpleTransportationLineDSL">
+  <simconfig budget="100000" remainingBudget="58250" averageQuality="0.0" totalEnergyConsumption="20.29633333333333"/>
+  <area name="mainArea">
+    <component xsi:type="simpleTransportationLineDSL:SentStore" typeId="9" processingTime="0" capacity="9999">
+      <inputSlot requiredType="3" name="input"/>
+      <inputSlot requiredType="3" name="input2"/>
+      <componentinfo/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:WasteStore" typeId="10" processingTime="0" capacity="9999">
+      <inputSlot name="input"/>
+      <inputSlot name="input2"/>
+      <componentinfo/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="6" typeId="2" processingTime="2000" activeEnergy="200" passiveEnergy="150" cost="150">
+      <outputSlot name="output1"/>
+      <outputSlot inputSlot="//@area.0/@component.29/@inputSlot.0" name="output2"/>
+      <inputSlot requiredType="3" name="input1"/>
+      <inputSlot outputSlot="//@area.0/@component.14/@outputSlot.2" requiredType="3" name="input2"/>
+      <componentinfo energyConsumption="1.2"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="1" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="45" cost="2000" generatedType="2">
+      <outputSlot inputSlot="//@area.0/@component.4/@inputSlot.0" providedType="2" name="output">
+        <item name="ca60dc4d-072f-4b0a-b205-af3d47e5c299" type="2">
+          <iteminfo creationTime="180000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="180000" productionCost="135" okCount="3" utilization="0.00625" energyConsumption="0.0895"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="9" typeId="3" processingTime="20000" activeEnergy="500" passiveEnergy="50" cost="800" reliability="0.85" minInput="2">
+      <outputSlot providedType="3" name="output">
+        <item name="6d8e4d44-ce48-4f73-ade9-162fe6b2792f" type="3" state="-1">
+          <iteminfo creationTime="80000">
+            <sourceItems name="fa6a3298-d9b5-4db0-8712-604e6a6aa3dc" type="2">
+              <iteminfo creationTime="60000"/>
+            </sourceItems>
+            <sourceItems name="71663756-0df4-4224-8a91-0a5c636172a9" type="2">
+              <iteminfo creationTime="60000"/>
+            </sourceItems>
+          </iteminfo>
+        </item>
+      </outputSlot>
+      <inputSlot outputSlot="//@area.0/@component.3/@outputSlot.0" requiredType="2" name="input1">
+        <item name="b8233cfc-d268-4f6a-9fe5-7714b85516de" type="2">
+          <iteminfo creationTime="120000"/>
+        </item>
+      </inputSlot>
+      <inputSlot outputSlot="//@area.0/@component.6/@outputSlot.0" requiredType="2" name="input2">
+        <item name="cf67996e-e285-40fe-9834-d78adc6405aa" type="2">
+          <iteminfo creationTime="120000"/>
+        </item>
+      </inputSlot>
+      <componentinfo useTime="20000" okCount="1" utilization="6.944444444444445E-4" energyConsumption="0.4025"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:TurnTable" pseudoId="18" typeId="4" processingTime="200" activeEnergy="50" passiveEnergy="50" cost="100">
+      <outputSlot proviededState="666" name="broken"/>
+      <outputSlot providedType="2" name="part"/>
+      <outputSlot providedType="3" name="toy"/>
+      <inputSlot outputSlot="//@area.0/@component.9/@outputSlot.2" requiredType="3" name="input"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="2" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="45" cost="2000" generatedType="2">
+      <outputSlot inputSlot="//@area.0/@component.4/@inputSlot.1" providedType="2" name="output">
+        <item name="95d20ffe-aed4-4f05-be4f-a006cee4c814" type="2">
+          <iteminfo creationTime="180000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="180000" productionCost="135" okCount="3" utilization="0.00625" energyConsumption="0.0895"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="16" typeId="3" processingTime="20000" activeEnergy="2000" passiveEnergy="50" cost="2000" minInput="2">
+      <outputSlot inputSlot="//@area.0/@component.13/@inputSlot.0" providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="9" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="45" cost="2000" generatedType="2">
+      <outputSlot inputSlot="//@area.0/@component.9/@inputSlot.0" providedType="2" name="output">
+        <item name="dda853fb-5402-4f32-9f56-b77eece61cd2" type="2">
+          <iteminfo creationTime="180000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="180000" productionCost="135" okCount="3" utilization="0.00625" energyConsumption="0.0895"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:TurnTable" pseudoId="2" typeId="4" processingTime="200" activeEnergy="50" passiveEnergy="50" cost="100">
+      <outputSlot proviededState="666" name="broken"/>
+      <outputSlot providedType="2" name="part">
+        <item name="b002f05a-808f-41a8-85e9-0644592f07d5" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <outputSlot inputSlot="//@area.0/@component.5/@inputSlot.0" providedType="3" name="toy"/>
+      <inputSlot outputSlot="//@area.0/@component.8/@outputSlot.0" requiredType="2" name="input">
+        <item name="ca3e39a0-a7b3-4db6-b188-f76bb2ad84f0" type="2">
+          <iteminfo creationTime="120000"/>
+        </item>
+      </inputSlot>
+      <componentinfo useTime="200" okCount="1" utilization="6.944444444444445E-6" energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:NormalStore" pseudoId="7" typeId="5" processingTime="1000" activeEnergy="400" passiveEnergy="10" cost="200">
+      <outputSlot name="output"/>
+      <inputSlot name="input"/>
+      <componentinfo energyConsumption="0.08"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="8" typeId="3" processingTime="20000" activeEnergy="500" passiveEnergy="50" cost="800" reliability="0.85" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="13" typeId="3" processingTime="20000" activeEnergy="2000" passiveEnergy="50" cost="2000" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="3" typeId="2" processingTime="2000" activeEnergy="200" passiveEnergy="150" cost="150">
+      <outputSlot providedType="3" name="output1"/>
+      <outputSlot providedType="3" name="output2"/>
+      <inputSlot outputSlot="//@area.0/@component.7/@outputSlot.0" requiredType="3" name="input1"/>
+      <inputSlot requiredType="3" name="input2"/>
+      <componentinfo energyConsumption="1.2"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:TurnTable" pseudoId="12" typeId="4" processingTime="200" activeEnergy="50" passiveEnergy="50" cost="100">
+      <outputSlot proviededState="666" name="broken"/>
+      <outputSlot providedType="2" name="part"/>
+      <outputSlot inputSlot="//@area.0/@component.2/@inputSlot.1" providedType="3" name="toy"/>
+      <inputSlot outputSlot="//@area.0/@component.16/@outputSlot.0" name="input"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="17" typeId="3" processingTime="20000" activeEnergy="2000" passiveEnergy="50" cost="2000" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="17" typeId="2" processingTime="2000" activeEnergy="150" passiveEnergy="100" cost="100">
+      <outputSlot inputSlot="//@area.0/@component.14/@inputSlot.0" name="output1"/>
+      <inputSlot requiredType="1" name="input2"/>
+      <inputSlot name="input1"/>
+      <componentinfo energyConsumption="0.8"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="4" typeId="3" processingTime="20000" activeEnergy="500" passiveEnergy="50" cost="800" reliability="0.85" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="14" typeId="2" processingTime="2000" activeEnergy="150" passiveEnergy="100" cost="100">
+      <outputSlot name="output1"/>
+      <inputSlot requiredType="1" name="input2"/>
+      <inputSlot name="input1"/>
+      <componentinfo energyConsumption="0.8"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="10" cost="500" reliability="0.9" generatedType="2">
+      <outputSlot providedType="2" name="output">
+        <item name="89c17d10-001f-470e-ae80-531efd0bbc50" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" productionCost="10" okCount="1" utilization="0.0020833333333333333" energyConsumption="0.08316666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="7" typeId="2" processingTime="2000" activeEnergy="150" passiveEnergy="100" cost="100">
+      <outputSlot name="output1"/>
+      <inputSlot requiredType="1" name="input2"/>
+      <inputSlot name="input1"/>
+      <componentinfo energyConsumption="0.8"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="14" typeId="3" processingTime="20000" activeEnergy="2000" passiveEnergy="50" cost="2000" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="1" typeId="2" processingTime="2000" activeEnergy="200" passiveEnergy="150" cost="150">
+      <outputSlot name="output1"/>
+      <outputSlot name="output2"/>
+      <inputSlot name="input1"/>
+      <inputSlot name="input2"/>
+      <componentinfo energyConsumption="1.2"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="18" typeId="3" processingTime="20000" activeEnergy="2000" passiveEnergy="50" cost="2000" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="19" typeId="3" processingTime="20000" activeEnergy="500" passiveEnergy="50" cost="800" reliability="0.85" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="4" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="45" cost="2000" generatedType="2">
+      <outputSlot providedType="2" name="output">
+        <item name="7875439c-2b18-41f0-9a77-9c67fa157965" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" productionCost="45" okCount="1" utilization="0.0020833333333333333" energyConsumption="0.08316666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="9" typeId="2" processingTime="2000" activeEnergy="200" passiveEnergy="150" cost="150">
+      <outputSlot name="output1"/>
+      <outputSlot name="output2"/>
+      <inputSlot name="input1"/>
+      <inputSlot name="input2"/>
+      <componentinfo energyConsumption="1.2"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="2" typeId="2" processingTime="2000" activeEnergy="200" passiveEnergy="150" cost="150">
+      <outputSlot name="output1"/>
+      <outputSlot name="output2"/>
+      <inputSlot name="input1"/>
+      <inputSlot name="input2"/>
+      <componentinfo energyConsumption="1.2"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="7" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="45" cost="2000" generatedType="2">
+      <outputSlot providedType="2" name="output">
+        <item name="371ca544-257b-4dbf-a84b-e0ce31d6d18a" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" productionCost="45" okCount="1" utilization="0.0020833333333333333" energyConsumption="0.08316666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:NormalStore" pseudoId="10" typeId="5" processingTime="1000" activeEnergy="400" passiveEnergy="10" cost="200">
+      <outputSlot name="output"/>
+      <inputSlot outputSlot="//@area.0/@component.2/@outputSlot.1" name="input"/>
+      <componentinfo energyConsumption="0.08"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="5" typeId="3" processingTime="20000" activeEnergy="2000" passiveEnergy="50" cost="2000" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="4" typeId="2" processingTime="2000" activeEnergy="200" passiveEnergy="150" cost="150">
+      <outputSlot providedType="3" name="output1"/>
+      <outputSlot providedType="3" name="output2"/>
+      <inputSlot requiredType="3" name="input1"/>
+      <inputSlot requiredType="3" name="input2"/>
+      <componentinfo energyConsumption="1.2"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="2" typeId="3" processingTime="20000" activeEnergy="500" passiveEnergy="50" cost="800" reliability="0.85" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="1" typeId="3" processingTime="20000" activeEnergy="2000" passiveEnergy="50" cost="2000" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="12" typeId="3" processingTime="20000" activeEnergy="2000" passiveEnergy="50" cost="2000" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="11" typeId="3" processingTime="20000" activeEnergy="500" passiveEnergy="50" cost="800" reliability="0.85" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="20" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="10" cost="500" reliability="0.9" generatedType="2">
+      <outputSlot providedType="2" name="output">
+        <item name="0cd9dcfc-373e-46ae-9111-85779244b2db" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" productionCost="10" okCount="1" utilization="0.0020833333333333333" energyConsumption="0.08316666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="5" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="45" cost="2000" generatedType="2">
+      <outputSlot providedType="2" name="output">
+        <item name="c0e935e2-1b3f-4775-8ce1-9b012c06c08c" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" productionCost="45" okCount="1" utilization="0.0020833333333333333" energyConsumption="0.08316666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="13" typeId="2" processingTime="2000" activeEnergy="200" passiveEnergy="150" cost="150">
+      <outputSlot name="output1"/>
+      <outputSlot name="output2"/>
+      <inputSlot name="input1"/>
+      <inputSlot name="input2"/>
+      <componentinfo energyConsumption="1.2"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Conveyor" pseudoId="8" typeId="2" processingTime="2000" activeEnergy="150" passiveEnergy="100" cost="100">
+      <outputSlot name="output1"/>
+      <inputSlot requiredType="1" name="input2"/>
+      <inputSlot name="input1"/>
+      <componentinfo energyConsumption="0.8"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="6" typeId="3" processingTime="20000" activeEnergy="500" passiveEnergy="50" cost="800" reliability="0.85" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="13" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="10" cost="500" reliability="0.9" generatedType="2">
+      <outputSlot providedType="2" name="output">
+        <item name="e7ec5922-2914-49fe-a138-0e3a59402b7d" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" productionCost="10" okCount="1" utilization="0.0020833333333333333" energyConsumption="0.08316666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="6" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="10" cost="500" reliability="0.9" generatedType="2">
+      <outputSlot providedType="2" name="output">
+        <item name="748270f1-ad25-45e7-b124-d65e375dfa0c" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" productionCost="10" okCount="1" utilization="0.0020833333333333333" energyConsumption="0.08316666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" pseudoId="18" typeId="1" processingTime="60000" activeEnergy="200" passiveEnergy="10" productionCost="45" cost="2000" generatedType="2">
+      <outputSlot providedType="2" name="output">
+        <item name="7f3abc57-869c-4a41-81c3-76844f626c54" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" productionCost="45" okCount="1" utilization="0.0020833333333333333" energyConsumption="0.08316666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" pseudoId="15" typeId="3" processingTime="20000" activeEnergy="2000" passiveEnergy="50" cost="2000" minInput="2">
+      <outputSlot providedType="3" name="output"/>
+      <inputSlot requiredType="2" name="input1"/>
+      <inputSlot requiredType="2" name="input2"/>
+      <componentinfo energyConsumption="0.4"/>
+    </component>
+  </area>
+</simpleTransportationLineDSL:System>

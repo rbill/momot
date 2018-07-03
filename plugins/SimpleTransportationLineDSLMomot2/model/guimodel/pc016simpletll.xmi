@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleTransportationLineDSL:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simpleTransportationLineDSL="http://www.example.org/simpleTransportationLineDSL">
+  <simconfig budget="100000" remainingBudget="78600" averageLatency="NaN" averageQuality="NaN"/>
+  <area>
+    <component xsi:type="simpleTransportationLineDSL:WasteStore" name="Mülllager" inputSlot="//@area.0/@component.11/@outputSlot.0 //@area.0/@component.12/@outputSlot.0" capacity="1000000">
+      <componentinfo/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:SentStore" name="Versandlager" inputSlot="//@area.0/@component.11/@outputSlot.2" capacity="1000000">
+      <componentinfo/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="Drucker_3" processingTime="60000" cost="2000" generatedType="2">
+      <outputSlot outputComponent="//@area.0/@component.3" requiredType="2">
+        <item name="2ed40ab2-1a9d-416f-9848-ed81f81ea1cc" type="2">
+          <iteminfo creationTime="130000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="120000" utilization="0.004166666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Band" name="Multiband_1" inputSlot="//@area.0/@component.2/@outputSlot.0 //@area.0/@component.4/@outputSlot.0 //@area.0/@component.5/@outputSlot.0 //@area.0/@component.6/@outputSlot.0 //@area.0/@component.10/@outputSlot.0" processingTime="5000" cost="1000">
+      <outputSlot outputComponent="//@area.0/@component.13" requiredType="2">
+        <item name="681cc3be-3338-4fb8-b1d9-5f866aa492ac" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <outputSlot outputComponent="//@area.0/@component.13" requiredType="2">
+        <item name="0c7d3dfe-f381-4e24-87f7-7738cc1b3c6a" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="10000" utilization="3.4722222222222224E-4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="Drucker_4" processingTime="60000" cost="2000" generatedType="2">
+      <outputSlot outputComponent="//@area.0/@component.3" requiredType="2">
+        <item name="ad42cb08-513e-4447-ba5e-bf83dd56bb8c" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" utilization="0.0020833333333333333"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="Drucker_3" processingTime="60000" cost="2000" generatedType="2">
+      <outputSlot outputComponent="//@area.0/@component.3" requiredType="2">
+        <item name="d1688ec0-271b-4cd6-a7d7-7906e1ea38cb" type="2">
+          <iteminfo creationTime="125000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="120000" utilization="0.004166666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="Drucker_4" processingTime="60000" cost="2000" generatedType="2">
+      <outputSlot outputComponent="//@area.0/@component.3" requiredType="2">
+        <item name="a84961b6-5a2e-409a-b91a-1ab0266e0d51" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" utilization="0.0020833333333333333"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="SchlechterDrucker_5" processingTime="60000" cost="1000" reliability="0.9" generatedType="2">
+      <outputSlot outputComponent="//@area.0/@component.12" requiredType="2">
+        <item name="e9db9bb9-f887-43ee-a6e5-7aefa4e57caa" type="2">
+          <iteminfo creationTime="130000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="120000" utilization="0.004166666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="SchlechterDrucker_6" processingTime="60000" cost="1000" reliability="0.9" generatedType="2">
+      <outputSlot outputComponent="//@area.0/@component.12" requiredType="2">
+        <item name="2e4221ca-098a-4b44-b770-fda13e89d532" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" utilization="0.0020833333333333333"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="SchlechterDrucker_7" processingTime="60000" cost="1000" reliability="0.9" generatedType="2">
+      <outputSlot outputComponent="//@area.0/@component.12" requiredType="2">
+        <item name="858a7baa-8875-459b-b58b-4aab834784d7" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" utilization="0.0020833333333333333"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="Drucker_8" processingTime="60000" cost="2000" generatedType="2">
+      <outputSlot outputComponent="//@area.0/@component.3" requiredType="2">
+        <item name="853ff07b-8dc6-4dff-8a44-4c9a1a394472" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="60000" utilization="0.0020833333333333333"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:TurnTable" name="Turntable_2" inputSlot="//@area.0/@component.13/@outputSlot.0" cost="700">
+      <outputSlot outputComponent="//@area.0/@component.0" requiredState="666"/>
+      <outputSlot requiredType="2"/>
+      <outputSlot outputComponent="//@area.0/@component.1" requiredType="3"/>
+      <componentinfo/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:TurnTable" name="Turntable_2" inputSlot="//@area.0/@component.7/@outputSlot.0 //@area.0/@component.8/@outputSlot.0 //@area.0/@component.9/@outputSlot.0" cost="700">
+      <outputSlot outputComponent="//@area.0/@component.0" requiredState="666"/>
+      <outputSlot outputComponent="//@area.0/@component.14" requiredType="2">
+        <item name="a45f50e0-f615-47fc-b44f-e2ea6712c87a" type="2">
+          <iteminfo creationTime="60000"/>
+        </item>
+      </outputSlot>
+      <outputSlot requiredType="3"/>
+      <componentinfo useTime="30000" utilization="0.0010416666666666667"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" name="Maschine_1" inputSlot="//@area.0/@component.3/@outputSlot.1 //@area.0/@component.3/@outputSlot.0 //@area.0/@component.14/@outputSlot.1 //@area.0/@component.14/@outputSlot.0" processingTime="20000" cost="5000" minInput="2">
+      <outputSlot outputComponent="//@area.0/@component.11" requiredType="3"/>
+      <componentinfo/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Band" name="Multiband_2" inputSlot="//@area.0/@component.12/@outputSlot.1" processingTime="5000" cost="1000">
+      <outputSlot outputComponent="//@area.0/@component.13" requiredType="2"/>
+      <outputSlot outputComponent="//@area.0/@component.13" requiredType="2"/>
+      <componentinfo/>
+    </component>
+  </area>
+</simpleTransportationLineDSL:System>

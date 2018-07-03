@@ -12,23 +12,44 @@
  *******************************************************************************/
 package at.ac.tuwien.big.moea.search.fitness.comparator;
 
-import at.ac.tuwien.big.moea.problem.solution.SearchSolution;
-import at.ac.tuwien.big.moea.util.MathUtil;
-
 import org.moeaframework.core.Solution;
+
+import at.ac.tuwien.big.moea.problem.solution.SearchSolution;
+import at.ac.tuwien.big.moea.search.fitness.IFitnessEvaluation;
+import at.ac.tuwien.big.moea.util.MathUtil;
 
 public class AggregatedFitnessComparator<S extends Solution> extends AttributeFitnessComparator<Double, S> {
 
-   public AggregatedFitnessComparator() {
-      super(SearchSolution.ATTRIBUTE_AGGREGATED_FITNESS, Double.class);
-   }
+	public AggregatedFitnessComparator() {
+		super(SearchSolution.ATTRIBUTE_AGGREGATED_FITNESS, Double.class);
+	}
 
-   @Override
-   public Double getValue(final S solution) {
-      Double fitness = super.getValue(solution);
-      if(fitness == null) {
-         fitness = MathUtil.getSum(solution.getObjectives(), solution.getConstraints());
-      }
-      return fitness;
-   }
+	@Override
+	public Double getValue(S solution) {
+		Double fitness = super.getValue(solution);
+		if(fitness == null)
+			fitness = MathUtil.getSum(solution.getObjectives(), solution.getConstraints());
+		return fitness;
+	}
+	
+
+	public IFitnessEvaluation<S> toFunction() {
+		return new IFitnessEvaluation<S>() {
+
+			@Override
+			public double doEvaluate(Solution solution) {
+				try {
+					return evaluate((S)solution);
+ 				} catch (ClassCastException e) {
+ 					return Double.POSITIVE_INFINITY;
+ 				}
+			}
+
+			@Override
+			public double evaluate(S solution) {
+				return getValue(solution);
+			}
+			
+		};
+	}
 }

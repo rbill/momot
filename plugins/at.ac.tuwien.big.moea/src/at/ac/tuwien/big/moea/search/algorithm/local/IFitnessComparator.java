@@ -17,6 +17,11 @@ import java.util.Comparator;
 
 import org.moeaframework.core.Solution;
 
+import at.ac.tuwien.big.moea.search.fitness.IFitnessEvaluation;
+import at.ac.tuwien.big.moea.search.fitness.IFitnessFunction;
+
 public interface IFitnessComparator<C extends Comparable<C> & Serializable, S extends Solution> extends Comparator<S> {
-   C getValue(S solution);
+	C getValue(S solution);
+
+	public IFitnessEvaluation<S> toFunction();
 }

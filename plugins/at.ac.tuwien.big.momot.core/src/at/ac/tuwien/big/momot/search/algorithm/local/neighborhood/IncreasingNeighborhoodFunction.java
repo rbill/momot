@@ -17,6 +17,7 @@ import at.ac.tuwien.big.moea.search.algorithm.local.neighborhood.AbstractNeighbo
 import at.ac.tuwien.big.momot.problem.solution.TransformationSolution;
 import at.ac.tuwien.big.momot.search.solution.executor.SearchHelper;
 
+import java.util.Collection;
 import java.util.Iterator;
 
 public class IncreasingNeighborhoodFunction extends AbstractNeighborhoodFunction<TransformationSolution> {
@@ -35,7 +36,8 @@ public class IncreasingNeighborhoodFunction extends AbstractNeighborhoodFunction
 
    @Override
    public INeighborhood<TransformationSolution> generateNeighbors(final TransformationSolution solution,
-         final int maxNeighbors) {
+         final int maxNeighbors, final Collection<Integer> forbiddenIndices) {
+      // TODO: Forbidden indices not considered?
       final TransformationSolution nonEmptySolution = TransformationSolution.removePlaceholders(solution);
       return new AbstractMatchSolutionNeighborhood(nonEmptySolution, maxNeighbors) {
 

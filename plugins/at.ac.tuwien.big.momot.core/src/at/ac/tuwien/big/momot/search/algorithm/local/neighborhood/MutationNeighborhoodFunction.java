@@ -16,6 +16,7 @@ import at.ac.tuwien.big.moea.search.algorithm.local.INeighborhood;
 import at.ac.tuwien.big.moea.search.algorithm.local.neighborhood.AbstractNeighborhoodFunction;
 import at.ac.tuwien.big.momot.problem.solution.TransformationSolution;
 
+import java.util.Collection;
 import java.util.Iterator;
 
 import org.moeaframework.core.Solution;
@@ -40,7 +41,8 @@ public class MutationNeighborhoodFunction extends AbstractNeighborhoodFunction<T
 
    @Override
    public INeighborhood<TransformationSolution> generateNeighbors(final TransformationSolution solution,
-         final int maxNeighbors) {
+         final int maxNeighbors, final Collection<Integer> forbiddenIndices) {
+      // TODOL Forbidden indices not considered ... why?
       return new AbstractMatchSolutionNeighborhood(solution, maxNeighbors) {
 
          @Override

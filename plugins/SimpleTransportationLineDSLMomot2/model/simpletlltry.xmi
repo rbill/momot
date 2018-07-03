@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleTransportationLineDSL:System
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simpleTransportationLineDSL="http://www.example.org/simpleTransportationLineDSL">
+  <simconfig
+      budget="100000"
+      remainingBudget="90500"
+      itemThroughput="360"
+      averageLatency="20000.0"
+      simSpeed="1000.0"/>
+  <area name="simple">
+    <component
+        xsi:type="simpleTransportationLineDSL:ItemGenerator"
+        name="Gen1">
+      <outputSlot
+          outputComponent="//@area.0/@component.2"
+          name="g1s"/>
+    </component>
+    <component
+        xsi:type="simpleTransportationLineDSL:ItemGenerator"
+        name="Gen2">
+      <outputSlot
+          outputComponent="//@area.0/@component.2"
+          name="g2s"/>
+    </component>
+    <component
+        xsi:type="simpleTransportationLineDSL:Machine"
+        name="assembler"
+        inputSlot="//@area.0/@component.1/@outputSlot.0 //@area.0/@component.0/@outputSlot.0">
+      <outputSlot
+          outputComponent="//@area.0/@component.3"
+          name="as"/>
+    </component>
+    <component
+        xsi:type="simpleTransportationLineDSL:SentStore"
+        name="verkauf"
+        inputSlot="//@area.0/@component.2/@outputSlot.0"/>
+  </area>
+</simpleTransportationLineDSL:System>

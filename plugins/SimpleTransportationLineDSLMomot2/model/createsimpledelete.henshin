@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_w2p6sHSTEeiR4vBKhA0jzQ">
+  <imports href="http://www.example.org/simpleTransportationLineDSL#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_4ap2YFUnEeeR4fBKhA0jzQ" name="deleteComponent">
+    <parameters xmi:id="_68tjcFUnEeeR4fBKhA0jzQ" name="compId">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_68tjcVUnEeeR4fBKhA0jzQ" name="typeId">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_4bIXgFUnEeeR4fBKhA0jzQ" name="Lhs">
+      <nodes xmi:id="_7U6BAFUnEeeR4fBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component"/>
+        <attributes xmi:id="_88vhgFUnEeeR4fBKhA0jzQ" value="compId">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_9aTAMFUnEeeR4fBKhA0jzQ" value="typeId">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_4bIXgVUnEeeR4fBKhA0jzQ" name="Rhs"/>
+  </units>
+  
+  <units xsi:type="henshin:Rule" xmi:id="_HqPAMHSUEeiR4vBKhA0jzQ" name="CreateExpensivePrinter">
+    <parameters xmi:id="_HqPAMXSUEeiR4vBKhA0jzQ" name="x" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_8laI4FXSEee_KvSS4WUNUQ" name="cheap" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </parameters>
+    <lhs xmi:id="_HqPAMnSUEeiR4vBKhA0jzQ" name="Lhs">
+      <nodes xmi:id="_HqPAM3SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_HqPANHSUEeiR4vBKhA0jzQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_HqPANXSUEeiR4vBKhA0jzQ">
+          <conclusion xmi:id="_HqPANnSUEeiR4vBKhA0jzQ">
+            <nodes xmi:id="_HqPAN3SUEeiR4vBKhA0jzQ">
+              <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+            </nodes>
+            <nodes xmi:id="_HqPAOHSUEeiR4vBKhA0jzQ">
+              <type href="http://www.example.org/simpleTransportationLineDSL#//Component"/>
+              <attributes xmi:id="_HqPAOXSUEeiR4vBKhA0jzQ" value="x">
+                <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+              </attributes>
+              <attributes xmi:id="_HqPAOnSUEeiR4vBKhA0jzQ" value="1">
+                <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+              </attributes>
+            </nodes>
+          </conclusion>
+          <mappings xmi:id="_HqPAO3SUEeiR4vBKhA0jzQ" origin="_HqPAM3SUEeiR4vBKhA0jzQ" image="_HqPAN3SUEeiR4vBKhA0jzQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_HqPAPHSUEeiR4vBKhA0jzQ" name="Rhs">
+      <nodes xmi:id="_HqPAPXSUEeiR4vBKhA0jzQ" incoming="_HqPATHSUEeiR4vBKhA0jzQ" outgoing="_HqPAS3SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//ItemGenerator"/>
+        <attributes xmi:id="_HqPAPnSUEeiR4vBKhA0jzQ" value="cheap?200:20000">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/cost"/>
+        </attributes>
+        <attributes xmi:id="_HqPAP3SUEeiR4vBKhA0jzQ" value="1">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+        </attributes>
+        <attributes xmi:id="_HqPAQHSUEeiR4vBKhA0jzQ" value="x">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_HqPAQXSUEeiR4vBKhA0jzQ" value="10">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/passiveEnergy"/>
+        </attributes>
+        <attributes xmi:id="_HqPAQnSUEeiR4vBKhA0jzQ" value="200">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/activeEnergy"/>
+        </attributes>
+        <attributes xmi:id="_HqPAQ3SUEeiR4vBKhA0jzQ" value="cheap?10:70">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/productionCost"/>
+        </attributes>
+        <attributes xmi:id="_HqPARHSUEeiR4vBKhA0jzQ" value="cheap?0.95:1">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/reliability"/>
+        </attributes>
+        <attributes xmi:id="_HqPARXSUEeiR4vBKhA0jzQ" value="60000">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/processingTime"/>
+        </attributes>
+        <attributes xmi:id="_HqPARnSUEeiR4vBKhA0jzQ" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//ItemGenerator/generatedType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_HqPAR3SUEeiR4vBKhA0jzQ" incoming="_HqPAS3SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot"/>
+        <attributes xmi:id="_HqPASHSUEeiR4vBKhA0jzQ" value="&quot;output&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_HqPASXSUEeiR4vBKhA0jzQ" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/providedType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_HqPASnSUEeiR4vBKhA0jzQ" outgoing="_HqPATHSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+      </nodes>
+      <edges xmi:id="_HqPAS3SUEeiR4vBKhA0jzQ" source="_HqPAPXSUEeiR4vBKhA0jzQ" target="_HqPAR3SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/outputSlot"/>
+      </edges>
+      <edges xmi:id="_HqPATHSUEeiR4vBKhA0jzQ" source="_HqPASnSUEeiR4vBKhA0jzQ" target="_HqPAPXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area/component"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_HqPATXSUEeiR4vBKhA0jzQ" origin="_HqPAM3SUEeiR4vBKhA0jzQ" image="_HqPASnSUEeiR4vBKhA0jzQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_JEpvwHSUEeiR4vBKhA0jzQ" name="CreateExpensiveMachine">
+    <parameters xmi:id="_JEpvwXSUEeiR4vBKhA0jzQ" name="machineId" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_2rz4QFXSEee_KvSS4WUNUQ" name="cheap" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </parameters>
+    <lhs xmi:id="_JEpvwnSUEeiR4vBKhA0jzQ" name="Lhs">
+      <nodes xmi:id="_JEpvw3SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_JEpvxHSUEeiR4vBKhA0jzQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_JEpvxXSUEeiR4vBKhA0jzQ">
+          <conclusion xmi:id="_JEpvxnSUEeiR4vBKhA0jzQ">
+            <nodes xmi:id="_JEpvx3SUEeiR4vBKhA0jzQ">
+              <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+            </nodes>
+            <nodes xmi:id="_JEpvyHSUEeiR4vBKhA0jzQ">
+              <type href="http://www.example.org/simpleTransportationLineDSL#//Component"/>
+              <attributes xmi:id="_JEpvyXSUEeiR4vBKhA0jzQ" value="machineId">
+                <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+              </attributes>
+              <attributes xmi:id="_JEpvynSUEeiR4vBKhA0jzQ" value="3">
+                <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+              </attributes>
+            </nodes>
+          </conclusion>
+          <mappings xmi:id="_JEpvy3SUEeiR4vBKhA0jzQ" origin="_JEpvw3SUEeiR4vBKhA0jzQ" image="_JEpvx3SUEeiR4vBKhA0jzQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_JEpvzHSUEeiR4vBKhA0jzQ" name="Rhs">
+      <nodes xmi:id="_JEpvzXSUEeiR4vBKhA0jzQ" incoming="_JEpv43SUEeiR4vBKhA0jzQ" outgoing="_JEpv4HSUEeiR4vBKhA0jzQ _JEpv4XSUEeiR4vBKhA0jzQ _JEpv4nSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Machine"/>
+        <attributes xmi:id="_JEpvznSUEeiR4vBKhA0jzQ" value="cheap?200:20000">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/cost"/>
+        </attributes>
+        <attributes xmi:id="_JEpvz3SUEeiR4vBKhA0jzQ" value="3">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+        </attributes>
+        <attributes xmi:id="_JEpv0HSUEeiR4vBKhA0jzQ" value="2000">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/activeEnergy"/>
+        </attributes>
+        <attributes xmi:id="_JEpv0XSUEeiR4vBKhA0jzQ" value="50">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/passiveEnergy"/>
+        </attributes>
+        <attributes xmi:id="_JEpv0nSUEeiR4vBKhA0jzQ" value="20000">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/processingTime"/>
+        </attributes>
+        <attributes xmi:id="_JEpv03SUEeiR4vBKhA0jzQ" value="machineId">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_JEpv1HSUEeiR4vBKhA0jzQ" value="cheap?0.95:1">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/reliability"/>
+        </attributes>
+        <attributes xmi:id="_JEpv1XSUEeiR4vBKhA0jzQ" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Machine/minInput"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JEpv1nSUEeiR4vBKhA0jzQ" incoming="_JEpv4nSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot"/>
+        <attributes xmi:id="_JEpv13SUEeiR4vBKhA0jzQ" value="&quot;output&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_JEpv2HSUEeiR4vBKhA0jzQ" value="3">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/providedType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JEpv2XSUEeiR4vBKhA0jzQ" incoming="_JEpv4HSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot"/>
+        <attributes xmi:id="_JEpv2nSUEeiR4vBKhA0jzQ" value="&quot;input1&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_JEpv23SUEeiR4vBKhA0jzQ" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/requiredType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JEpv3HSUEeiR4vBKhA0jzQ" incoming="_JEpv4XSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot"/>
+        <attributes xmi:id="_JEpv3XSUEeiR4vBKhA0jzQ" value="&quot;input2&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_JEpv3nSUEeiR4vBKhA0jzQ" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/requiredType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JEpv33SUEeiR4vBKhA0jzQ" outgoing="_JEpv43SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+      </nodes>
+      <edges xmi:id="_JEpv4HSUEeiR4vBKhA0jzQ" source="_JEpvzXSUEeiR4vBKhA0jzQ" target="_JEpv2XSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/inputSlot"/>
+      </edges>
+      <edges xmi:id="_JEpv4XSUEeiR4vBKhA0jzQ" source="_JEpvzXSUEeiR4vBKhA0jzQ" target="_JEpv3HSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/inputSlot"/>
+      </edges>
+      <edges xmi:id="_JEpv4nSUEeiR4vBKhA0jzQ" source="_JEpvzXSUEeiR4vBKhA0jzQ" target="_JEpv1nSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/outputSlot"/>
+      </edges>
+      <edges xmi:id="_JEpv43SUEeiR4vBKhA0jzQ" source="_JEpv33SUEeiR4vBKhA0jzQ" target="_JEpvzXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area/component"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_JEpv5HSUEeiR4vBKhA0jzQ" origin="_JEpvw3SUEeiR4vBKhA0jzQ" image="_JEpv33SUEeiR4vBKhA0jzQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_LIkIQHSUEeiR4vBKhA0jzQ" name="CreateToyConveyor">
+    <parameters xmi:id="_LIkIQXSUEeiR4vBKhA0jzQ" name="convId" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_LIkIQnSUEeiR4vBKhA0jzQ" name="Lhs">
+      <nodes xmi:id="_LIkIQ3SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_LIkIRHSUEeiR4vBKhA0jzQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_LIkIRXSUEeiR4vBKhA0jzQ">
+          <conclusion xmi:id="_LIkIRnSUEeiR4vBKhA0jzQ">
+            <nodes xmi:id="_LIkIR3SUEeiR4vBKhA0jzQ">
+              <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+            </nodes>
+            <nodes xmi:id="_LIkISHSUEeiR4vBKhA0jzQ">
+              <type href="http://www.example.org/simpleTransportationLineDSL#//Component"/>
+              <attributes xmi:id="_LIkISXSUEeiR4vBKhA0jzQ" value="2">
+                <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+              </attributes>
+              <attributes xmi:id="_LIkISnSUEeiR4vBKhA0jzQ" value="convId">
+                <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+              </attributes>
+            </nodes>
+          </conclusion>
+          <mappings xmi:id="_LIkIS3SUEeiR4vBKhA0jzQ" origin="_LIkIQ3SUEeiR4vBKhA0jzQ" image="_LIkIR3SUEeiR4vBKhA0jzQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_LIkITHSUEeiR4vBKhA0jzQ" name="Rhs">
+      <nodes xmi:id="_LIkITXSUEeiR4vBKhA0jzQ" incoming="_LIkIZnSUEeiR4vBKhA0jzQ" outgoing="_LIkIYnSUEeiR4vBKhA0jzQ _LIkIY3SUEeiR4vBKhA0jzQ _LIkIZHSUEeiR4vBKhA0jzQ _LIkIZXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Conveyor"/>
+        <attributes xmi:id="_LIkITnSUEeiR4vBKhA0jzQ" value="convId">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_LIkIT3SUEeiR4vBKhA0jzQ" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+        </attributes>
+        <attributes xmi:id="_LIkIUHSUEeiR4vBKhA0jzQ" value="150">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/passiveEnergy"/>
+        </attributes>
+        <attributes xmi:id="_LIkIUXSUEeiR4vBKhA0jzQ" value="200">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/activeEnergy"/>
+        </attributes>
+        <attributes xmi:id="_LIkIUnSUEeiR4vBKhA0jzQ" value="0">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/productionCost"/>
+        </attributes>
+        <attributes xmi:id="_LIkIU3SUEeiR4vBKhA0jzQ" value="2000">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/processingTime"/>
+        </attributes>
+        <attributes xmi:id="_LIkIVHSUEeiR4vBKhA0jzQ" value="150">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/cost"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LIkIVXSUEeiR4vBKhA0jzQ" incoming="_LIkIYnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot"/>
+        <attributes xmi:id="_LIkIVnSUEeiR4vBKhA0jzQ" value="&quot;input1&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_LIkIV3SUEeiR4vBKhA0jzQ" value="3">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/requiredType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LIkIWHSUEeiR4vBKhA0jzQ" incoming="_LIkIY3SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot"/>
+        <attributes xmi:id="_LIkIWXSUEeiR4vBKhA0jzQ" value="&quot;input2&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_LIkIWnSUEeiR4vBKhA0jzQ" value="3">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/requiredType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LIkIW3SUEeiR4vBKhA0jzQ" incoming="_LIkIZHSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot"/>
+        <attributes xmi:id="_LIkIXHSUEeiR4vBKhA0jzQ" value="&quot;output1&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_LIkIXXSUEeiR4vBKhA0jzQ" value="3">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/providedType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LIkIXnSUEeiR4vBKhA0jzQ" incoming="_LIkIZXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot"/>
+        <attributes xmi:id="_LIkIX3SUEeiR4vBKhA0jzQ" value="&quot;output2&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_LIkIYHSUEeiR4vBKhA0jzQ" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/providedType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LIkIYXSUEeiR4vBKhA0jzQ" outgoing="_LIkIZnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+      </nodes>
+      <edges xmi:id="_LIkIYnSUEeiR4vBKhA0jzQ" source="_LIkITXSUEeiR4vBKhA0jzQ" target="_LIkIVXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/inputSlot"/>
+      </edges>
+      <edges xmi:id="_LIkIY3SUEeiR4vBKhA0jzQ" source="_LIkITXSUEeiR4vBKhA0jzQ" target="_LIkIWHSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/inputSlot"/>
+      </edges>
+      <edges xmi:id="_LIkIZHSUEeiR4vBKhA0jzQ" source="_LIkITXSUEeiR4vBKhA0jzQ" target="_LIkIW3SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/outputSlot"/>
+      </edges>
+      <edges xmi:id="_LIkIZXSUEeiR4vBKhA0jzQ" source="_LIkITXSUEeiR4vBKhA0jzQ" target="_LIkIXnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/outputSlot"/>
+      </edges>
+      <edges xmi:id="_LIkIZnSUEeiR4vBKhA0jzQ" source="_LIkIYXSUEeiR4vBKhA0jzQ" target="_LIkITXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area/component"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_LIkIZ3SUEeiR4vBKhA0jzQ" origin="_LIkIQ3SUEeiR4vBKhA0jzQ" image="_LIkIYXSUEeiR4vBKhA0jzQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Nf7BMHSUEeiR4vBKhA0jzQ" name="reconnectMatchingSlot">
+    <parameters xmi:id="_Nf7BMXSUEeiR4vBKhA0jzQ" name="inCompId">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Nf7BMnSUEeiR4vBKhA0jzQ" name="inCompType">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Nf7BM3SUEeiR4vBKhA0jzQ" name="inSlot">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Nf7BNHSUEeiR4vBKhA0jzQ" name="outSlot">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Nf7BNXSUEeiR4vBKhA0jzQ" name="outCompId">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Nf7BNnSUEeiR4vBKhA0jzQ" name="outCompType">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Nf7BN3SUEeiR4vBKhA0jzQ" name="reqType" kind="VAR"/>
+    <lhs xmi:id="_Nf7BOHSUEeiR4vBKhA0jzQ" name="Lhs">
+      <nodes xmi:id="_Nf7BOXSUEeiR4vBKhA0jzQ" outgoing="_Nf7BRnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component"/>
+        <attributes xmi:id="_Nf7BOnSUEeiR4vBKhA0jzQ" value="inCompId">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_Nf7BO3SUEeiR4vBKhA0jzQ" value="inCompType">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Nf7BPHSUEeiR4vBKhA0jzQ" outgoing="_Nf7BRXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component"/>
+        <attributes xmi:id="_Nf7BPXSUEeiR4vBKhA0jzQ" value="outCompId">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_Nf7BPnSUEeiR4vBKhA0jzQ" value="outCompType">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Nf7BP3SUEeiR4vBKhA0jzQ" incoming="_Nf7BRXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot"/>
+        <attributes xmi:id="_Nf7BQHSUEeiR4vBKhA0jzQ" value="outSlot">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_Nf7BQXSUEeiR4vBKhA0jzQ" value="reqType">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/requiredType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Nf7BQnSUEeiR4vBKhA0jzQ" incoming="_Nf7BRnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot"/>
+        <attributes xmi:id="_Nf7BQ3SUEeiR4vBKhA0jzQ" value="inSlot">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_Nf7BRHSUEeiR4vBKhA0jzQ" value="reqType">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/providedType"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Nf7BRXSUEeiR4vBKhA0jzQ" source="_Nf7BPHSUEeiR4vBKhA0jzQ" target="_Nf7BP3SUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/inputSlot"/>
+      </edges>
+      <edges xmi:id="_Nf7BRnSUEeiR4vBKhA0jzQ" source="_Nf7BOXSUEeiR4vBKhA0jzQ" target="_Nf7BQnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/outputSlot"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Nf7BR3SUEeiR4vBKhA0jzQ" name="Rhs">
+      <nodes xmi:id="_Nf7BSHSUEeiR4vBKhA0jzQ" outgoing="_Nf7BVXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component"/>
+        <attributes xmi:id="_Nf7BSXSUEeiR4vBKhA0jzQ" value="inCompId">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_Nf7BSnSUEeiR4vBKhA0jzQ" value="inCompType">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Nf7BS3SUEeiR4vBKhA0jzQ" outgoing="_Nf7BVHSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component"/>
+        <attributes xmi:id="_Nf7BTHSUEeiR4vBKhA0jzQ" value="outCompId">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_Nf7BTXSUEeiR4vBKhA0jzQ" value="outCompType">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Nf7BTnSUEeiR4vBKhA0jzQ" incoming="_Nf7BVHSUEeiR4vBKhA0jzQ _Nf7BVnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot"/>
+        <attributes xmi:id="_Nf7BT3SUEeiR4vBKhA0jzQ" value="outSlot">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_Nf7BUHSUEeiR4vBKhA0jzQ" value="reqType">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/requiredType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Nf7BUXSUEeiR4vBKhA0jzQ" incoming="_Nf7BVXSUEeiR4vBKhA0jzQ" outgoing="_Nf7BVnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot"/>
+        <attributes xmi:id="_Nf7BUnSUEeiR4vBKhA0jzQ" value="inSlot">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_Nf7BU3SUEeiR4vBKhA0jzQ" value="reqType">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/providedType"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Nf7BVHSUEeiR4vBKhA0jzQ" source="_Nf7BS3SUEeiR4vBKhA0jzQ" target="_Nf7BTnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/inputSlot"/>
+      </edges>
+      <edges xmi:id="_Nf7BVXSUEeiR4vBKhA0jzQ" source="_Nf7BSHSUEeiR4vBKhA0jzQ" target="_Nf7BUXSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/outputSlot"/>
+      </edges>
+      <edges xmi:id="_Nf7BVnSUEeiR4vBKhA0jzQ" source="_Nf7BUXSUEeiR4vBKhA0jzQ" target="_Nf7BTnSUEeiR4vBKhA0jzQ">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/inputSlot"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Nf7BV3SUEeiR4vBKhA0jzQ" origin="_Nf7BOXSUEeiR4vBKhA0jzQ" image="_Nf7BSHSUEeiR4vBKhA0jzQ"/>
+    <mappings xmi:id="_Nf7BWHSUEeiR4vBKhA0jzQ" origin="_Nf7BPHSUEeiR4vBKhA0jzQ" image="_Nf7BS3SUEeiR4vBKhA0jzQ"/>
+    <mappings xmi:id="_Nf7BWXSUEeiR4vBKhA0jzQ" origin="_Nf7BP3SUEeiR4vBKhA0jzQ" image="_Nf7BTnSUEeiR4vBKhA0jzQ"/>
+    <mappings xmi:id="_Nf7BWnSUEeiR4vBKhA0jzQ" origin="_Nf7BQnSUEeiR4vBKhA0jzQ" image="_Nf7BUXSUEeiR4vBKhA0jzQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_TGdcUFXFEeeGWuvyOhqYcA" name="CreatePartConveyor">
+    <parameters xmi:id="_TGdcUVXFEeeGWuvyOhqYcA" name="convId" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_TGdcUlXFEeeGWuvyOhqYcA" name="Lhs">
+      <nodes xmi:id="_TGdcU1XFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_TGdcVFXFEeeGWuvyOhqYcA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_TGdcVVXFEeeGWuvyOhqYcA">
+          <conclusion xmi:id="_TGdcVlXFEeeGWuvyOhqYcA">
+            <nodes xmi:id="_TGdcV1XFEeeGWuvyOhqYcA">
+              <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+            </nodes>
+            <nodes xmi:id="_TGdcWFXFEeeGWuvyOhqYcA">
+              <type href="http://www.example.org/simpleTransportationLineDSL#//Component"/>
+              <attributes xmi:id="_TGdcWVXFEeeGWuvyOhqYcA" value="2">
+                <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+              </attributes>
+              <attributes xmi:id="_TGdcWlXFEeeGWuvyOhqYcA" value="convId">
+                <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+              </attributes>
+            </nodes>
+          </conclusion>
+          <mappings xmi:id="_TGdcW1XFEeeGWuvyOhqYcA" origin="_TGdcU1XFEeeGWuvyOhqYcA" image="_TGdcV1XFEeeGWuvyOhqYcA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_TGdcXFXFEeeGWuvyOhqYcA" name="Rhs">
+      <nodes xmi:id="_TGdcXVXFEeeGWuvyOhqYcA" incoming="_TGeDd1XFEeeGWuvyOhqYcA" outgoing="_TGeDc1XFEeeGWuvyOhqYcA _TGeDdFXFEeeGWuvyOhqYcA _TGeDdVXFEeeGWuvyOhqYcA _TGeDdlXFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Conveyor"/>
+        <attributes xmi:id="_TGdcXlXFEeeGWuvyOhqYcA" value="convId">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_TGeDYFXFEeeGWuvyOhqYcA" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/typeId"/>
+        </attributes>
+        <attributes xmi:id="_TGeDYVXFEeeGWuvyOhqYcA" value="150">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/passiveEnergy"/>
+        </attributes>
+        <attributes xmi:id="_TGeDYlXFEeeGWuvyOhqYcA" value="200">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/activeEnergy"/>
+        </attributes>
+        <attributes xmi:id="_TGeDY1XFEeeGWuvyOhqYcA" value="0">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/productionCost"/>
+        </attributes>
+        <attributes xmi:id="_TGeDZFXFEeeGWuvyOhqYcA" value="2000">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/processingTime"/>
+        </attributes>
+        <attributes xmi:id="_TGeDZVXFEeeGWuvyOhqYcA" value="150">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//Component/cost"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_TGeDZlXFEeeGWuvyOhqYcA" incoming="_TGeDc1XFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot"/>
+        <attributes xmi:id="_TGeDZ1XFEeeGWuvyOhqYcA" value="&quot;input1&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_TGeDaFXFEeeGWuvyOhqYcA" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/requiredType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_TGeDaVXFEeeGWuvyOhqYcA" incoming="_TGeDdFXFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot"/>
+        <attributes xmi:id="_TGeDalXFEeeGWuvyOhqYcA" value="&quot;input2&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_TGeDa1XFEeeGWuvyOhqYcA" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//InputSlot/requiredType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_TGeDbFXFEeeGWuvyOhqYcA" incoming="_TGeDdVXFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot"/>
+        <attributes xmi:id="_TGeDbVXFEeeGWuvyOhqYcA" value="&quot;output1&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_TGeDblXFEeeGWuvyOhqYcA" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/providedType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_TGeDb1XFEeeGWuvyOhqYcA" incoming="_TGeDdlXFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot"/>
+        <attributes xmi:id="_TGeDcFXFEeeGWuvyOhqYcA" value="&quot;output2&quot;">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/name"/>
+        </attributes>
+        <attributes xmi:id="_TGeDcVXFEeeGWuvyOhqYcA" value="2">
+          <type href="http://www.example.org/simpleTransportationLineDSL#//OutputSlot/providedType"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_TGeDclXFEeeGWuvyOhqYcA" outgoing="_TGeDd1XFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area"/>
+      </nodes>
+      <edges xmi:id="_TGeDc1XFEeeGWuvyOhqYcA" source="_TGdcXVXFEeeGWuvyOhqYcA" target="_TGeDZlXFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/inputSlot"/>
+      </edges>
+      <edges xmi:id="_TGeDdFXFEeeGWuvyOhqYcA" source="_TGdcXVXFEeeGWuvyOhqYcA" target="_TGeDaVXFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/inputSlot"/>
+      </edges>
+      <edges xmi:id="_TGeDdVXFEeeGWuvyOhqYcA" source="_TGdcXVXFEeeGWuvyOhqYcA" target="_TGeDbFXFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/outputSlot"/>
+      </edges>
+      <edges xmi:id="_TGeDdlXFEeeGWuvyOhqYcA" source="_TGdcXVXFEeeGWuvyOhqYcA" target="_TGeDb1XFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Component/outputSlot"/>
+      </edges>
+      <edges xmi:id="_TGeDd1XFEeeGWuvyOhqYcA" source="_TGeDclXFEeeGWuvyOhqYcA" target="_TGdcXVXFEeeGWuvyOhqYcA">
+        <type href="http://www.example.org/simpleTransportationLineDSL#//Area/component"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_TGeDeFXFEeeGWuvyOhqYcA" origin="_TGdcU1XFEeeGWuvyOhqYcA" image="_TGeDclXFEeeGWuvyOhqYcA"/>
+  </units>
+</henshin:Module>

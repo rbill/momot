@@ -14,23 +14,45 @@ package at.ac.tuwien.big.moea.search.fitness.comparator;
 
 import org.moeaframework.core.Solution;
 
+import at.ac.tuwien.big.moea.search.fitness.IFitnessEvaluation;
+
 public class ConstraintFitnessComparator<S extends Solution> extends AbstractFitnessComparator<Double, S> {
 
-   private int constraintIndex = 0;
+	private int constraintIndex = 0;
+	
+	public ConstraintFitnessComparator(int constraintIndex) {
+		this.constraintIndex = constraintIndex;
+	}
+	
+	public int getConstraintIndex() {
+		return constraintIndex;
+	}
+	
+	@Override
+	public Double getValue(S solution) {
+		if(getConstraintIndex() >= solution.getNumberOfConstraints())
+			throw new IllegalArgumentException("Solution does not have " + getConstraintIndex() + 1 + " constraints.");
+		return solution.getConstraint(getConstraintIndex());
+	}
 
-   public ConstraintFitnessComparator(final int constraintIndex) {
-      this.constraintIndex = constraintIndex;
-   }
+	@Override
+	public IFitnessEvaluation<S> toFunction() {
+		return new IFitnessEvaluation<S>() {
 
-   public int getConstraintIndex() {
-      return constraintIndex;
-   }
+			@Override
+			public double doEvaluate(Solution solution) {
+				try {
+					return evaluate((S)solution);
+ 				} catch (ClassCastException e) {
+ 					return Double.POSITIVE_INFINITY;
+ 				}
+			}
 
-   @Override
-   public Double getValue(final S solution) {
-      if(getConstraintIndex() >= solution.getNumberOfConstraints()) {
-         throw new IllegalArgumentException("Solution does not have " + getConstraintIndex() + 1 + " constraints.");
-      }
-      return solution.getConstraint(getConstraintIndex());
-   }
+			@Override
+			public double evaluate(S solution) {
+				return getValue(solution);
+			}
+			
+		};
+	}
 }

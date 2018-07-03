@@ -12,42 +12,61 @@
  *******************************************************************************/
 package at.ac.tuwien.big.moea.experiment.executor.listener;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+
 import org.apache.commons.lang3.time.StopWatch;
 import org.moeaframework.util.progress.ProgressEvent;
 
 public class SeedRuntimePrintListener extends AbstractProgressListener {
 
-   private final StopWatch seedWatch = new StopWatch();
-   private final StopWatch totalWatch = new StopWatch();
+	private StopWatch seedWatch = new StopWatch();
+	private StopWatch totalWatch = new StopWatch();
+	
+	public static FileOutputStream fos = null;
+	public static PrintWriter writer = null;
+	{
+		try {
+			fos = new FileOutputStream("outputRuntime.txt");
+			writer = new PrintWriter(fos);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 
-   @Override
-   public void update(final ProgressEvent event) {
-      if(isStarted(event)) {
-         if(!totalWatch.isStarted()) {
-            totalWatch.start();
-         }
-      }
-
-      if(isStarted(event) || isSeedStarted(event)) {
-         if(!seedWatch.isStarted()) {
-            seedWatch.start();
-         }
-         println("Run " + event.getCurrentSeed() + " of " + event.getTotalSeeds() + " started.");
-      }
-
-      if(isSeedFinished(event)) {
-         seedWatch.stop();
-         println("Run " + event.getCurrentSeed() + " of " + event.getTotalSeeds() + " terminated after " + seedWatch
-               + " (" + seedWatch.getTime() + " ms).");
-         seedWatch.reset();
-      }
-
-      if(isFinished(event)) {
-         totalWatch.stop();
-         println("Total runtime for " + event.getTotalSeeds() + " seeds: " + totalWatch + " (" + totalWatch.getTime()
-               + " ms).");
-         totalWatch.reset();
-      }
-   }
+	@Override
+	public void update(ProgressEvent event) {
+		if(isStarted(event))
+			if(!totalWatch.isStarted())
+				totalWatch.start();
+		
+		if(isStarted(event) || isSeedStarted(event)) {
+			if(!seedWatch.isStarted()) 
+				seedWatch.start();
+			String output = "Run " + event.getCurrentSeed() + " of " + event.getTotalSeeds() + " started.";
+			println(output);
+			writer.append(output+"\n");
+			writer.flush();
+		}
+		
+		if(isSeedFinished(event)) {
+			seedWatch.stop();
+			String output = "Run " + event.getCurrentSeed() + " of " + event.getTotalSeeds() + " terminated after " + seedWatch + " (" + seedWatch.getTime() + " ms).";
+			println(output);
+			writer.append(output+"\n");
+			writer.flush();
+			seedWatch.reset();
+		}
+			
+		if(isFinished(event)) {
+			totalWatch.stop();
+			String output = "Total runtime for " + event.getTotalSeeds() + " seeds: " + totalWatch + " (" + totalWatch.getTime() + " ms).";
+			println(output);
+			writer.append(output+"\n");
+			writer.flush();
+			totalWatch.reset();
+		}
+	}
 
 }

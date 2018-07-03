@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simpleTransportationLineDSL:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simpleTransportationLineDSL="http://www.example.org/simpleTransportationLineDSL">
+  <simconfig budget="100000" remainingBudget="100000" averageLatency="NaN" averageQuality="NaN"/>
+  <area name="simple">
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="Gen1">
+      <outputSlot outputComponent="//@area.0/@component.2" name="g1s">
+        <item name="3c08d4f5-625a-4204-b1ab-284c218edb56" type="1">
+          <iteminfo creationTime="10000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="10000" utilization="3.4722222222222224E-4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:ItemGenerator" name="Gen2">
+      <outputSlot outputComponent="//@area.0/@component.2" name="g2s">
+        <item name="499790b3-a954-4f7c-9ab9-0f67dce44bed" type="1">
+          <iteminfo creationTime="10000"/>
+        </item>
+      </outputSlot>
+      <componentinfo useTime="10000" utilization="3.4722222222222224E-4"/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:Machine" name="assembler" inputSlot="//@area.0/@component.1/@outputSlot.0 //@area.0/@component.0/@outputSlot.0">
+      <outputSlot outputComponent="//@area.0/@component.3" name="as"/>
+      <componentinfo/>
+    </component>
+    <component xsi:type="simpleTransportationLineDSL:SentStore" name="verkauf" inputSlot="//@area.0/@component.2/@outputSlot.0">
+      <componentinfo/>
+    </component>
+  </area>
+</simpleTransportationLineDSL:System>

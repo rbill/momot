@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_qPaJAFTBEeepL87iWiv5Gw">
+  <imports href="simpleTransportationLineDSL.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_h4g6EFTCEeepL87iWiv5Gw" name="reconnectSlot">
+    <parameters xmi:id="_pkw0EFTCEeepL87iWiv5Gw" name="inCompId">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_pkw0EVTCEeepL87iWiv5Gw" name="inCompType">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_pkw0ElTCEeepL87iWiv5Gw" name="inSlot">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_PNHGsFTJEee3Mtped6ACaA" name="outSlot">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_pkw0E1TCEeepL87iWiv5Gw" name="outCompId">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_pkw0FFTCEeepL87iWiv5Gw" name="outCompType">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_h5tz8FTCEeepL87iWiv5Gw" name="Lhs">
+      <nodes xmi:id="_qiBtkFTCEeepL87iWiv5Gw" outgoing="_QvnbQFTJEee3Mtped6ACaA">
+        <type href="simpleTransportationLineDSL.ecore#//Component"/>
+        <attributes xmi:id="_04lRsFTCEeepL87iWiv5Gw" value="inCompId">
+          <type href="simpleTransportationLineDSL.ecore#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_1JbKEFTCEeepL87iWiv5Gw" value="inCompType">
+          <type href="simpleTransportationLineDSL.ecore#//Component/typeId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_rebrcFTCEeepL87iWiv5Gw">
+        <type href="simpleTransportationLineDSL.ecore#//Component"/>
+        <attributes xmi:id="_wIx6sFTCEeepL87iWiv5Gw" value="outCompId">
+          <type href="simpleTransportationLineDSL.ecore#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_xOu2IFTCEeepL87iWiv5Gw" value="outCompType">
+          <type href="simpleTransportationLineDSL.ecore#//Component/typeId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Mkb0QFTJEee3Mtped6ACaA">
+        <type href="simpleTransportationLineDSL.ecore#//InputSlot"/>
+        <attributes xmi:id="_VHh2sFTJEee3Mtped6ACaA" value="outSlot">
+          <type href="simpleTransportationLineDSL.ecore#//InputSlot/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_QOHQsFTJEee3Mtped6ACaA" incoming="_QvnbQFTJEee3Mtped6ACaA">
+        <type href="simpleTransportationLineDSL.ecore#//OutputSlot"/>
+        <attributes xmi:id="_UL3fsFTJEee3Mtped6ACaA" value="inSlot">
+          <type href="simpleTransportationLineDSL.ecore#//OutputSlot/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_QvnbQFTJEee3Mtped6ACaA" source="_qiBtkFTCEeepL87iWiv5Gw" target="_QOHQsFTJEee3Mtped6ACaA">
+        <type href="simpleTransportationLineDSL.ecore#//Component/outputSlot"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_h5ubAFTCEeepL87iWiv5Gw" name="Rhs">
+      <nodes xmi:id="_qiCUoFTCEeepL87iWiv5Gw" outgoing="_QvnbQVTJEee3Mtped6ACaA">
+        <type href="simpleTransportationLineDSL.ecore#//Component"/>
+        <attributes xmi:id="_04l4wFTCEeepL87iWiv5Gw" value="inCompId">
+          <type href="simpleTransportationLineDSL.ecore#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_1JbKEVTCEeepL87iWiv5Gw" value="inCompType">
+          <type href="simpleTransportationLineDSL.ecore#//Component/typeId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_rebrcVTCEeepL87iWiv5Gw">
+        <type href="simpleTransportationLineDSL.ecore#//Component"/>
+        <attributes xmi:id="_wIx6sVTCEeepL87iWiv5Gw" value="outCompId">
+          <type href="simpleTransportationLineDSL.ecore#//Component/pseudoId"/>
+        </attributes>
+        <attributes xmi:id="_xOu2IVTCEeepL87iWiv5Gw" value="outCompType">
+          <type href="simpleTransportationLineDSL.ecore#//Component/typeId"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_NDRsYFTJEee3Mtped6ACaA" incoming="_R3aJwFTJEee3Mtped6ACaA">
+        <type href="simpleTransportationLineDSL.ecore#//InputSlot"/>
+        <attributes xmi:id="_VHidwFTJEee3Mtped6ACaA" value="outSlot">
+          <type href="simpleTransportationLineDSL.ecore#//InputSlot/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_QOHQsVTJEee3Mtped6ACaA" incoming="_QvnbQVTJEee3Mtped6ACaA" outgoing="_R3aJwFTJEee3Mtped6ACaA">
+        <type href="simpleTransportationLineDSL.ecore#//OutputSlot"/>
+        <attributes xmi:id="_UL4GwFTJEee3Mtped6ACaA" value="inSlot">
+          <type href="simpleTransportationLineDSL.ecore#//OutputSlot/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_QvnbQVTJEee3Mtped6ACaA" source="_qiCUoFTCEeepL87iWiv5Gw" target="_QOHQsVTJEee3Mtped6ACaA">
+        <type href="simpleTransportationLineDSL.ecore#//Component/outputSlot"/>
+      </edges>
+      <edges xmi:id="_R3aJwFTJEee3Mtped6ACaA" source="_QOHQsVTJEee3Mtped6ACaA" target="_NDRsYFTJEee3Mtped6ACaA">
+        <type href="simpleTransportationLineDSL.ecore#//OutputSlot/inputSlot"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_qiDiwFTCEeepL87iWiv5Gw" origin="_qiBtkFTCEeepL87iWiv5Gw" image="_qiCUoFTCEeepL87iWiv5Gw"/>
+    <mappings xmi:id="_rebrclTCEeepL87iWiv5Gw" origin="_rebrcFTCEeepL87iWiv5Gw" image="_rebrcVTCEeepL87iWiv5Gw"/>
+    <mappings xmi:id="_NDRsYVTJEee3Mtped6ACaA" origin="_Mkb0QFTJEee3Mtped6ACaA" image="_NDRsYFTJEee3Mtped6ACaA"/>
+    <mappings xmi:id="_QOHQslTJEee3Mtped6ACaA" origin="_QOHQsFTJEee3Mtped6ACaA" image="_QOHQsVTJEee3Mtped6ACaA"/>
+  </units>
+</henshin:Module>

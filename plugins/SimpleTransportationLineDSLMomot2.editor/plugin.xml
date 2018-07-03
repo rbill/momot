@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated simpleTransportationLineDSL -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="simpleTransportationLineDSL.presentation.SimpleTransportationLineDSLModelWizardID"
+            name="%_UI_SimpleTransportationLineDSLModelWizard_label"
+            class="simpleTransportationLineDSL.presentation.SimpleTransportationLineDSLModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SimpleTransportationLineDSLModelFile.gif">
+         <description>%_UI_SimpleTransportationLineDSLModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated simpleTransportationLineDSL -->
+      <editor
+            id="simpleTransportationLineDSL.presentation.SimpleTransportationLineDSLEditorID"
+            name="%_UI_SimpleTransportationLineDSLEditor_label"
+            icon="icons/full/obj16/SimpleTransportationLineDSLModelFile.gif"
+            extensions="simpletransportationlinedsl"
+            class="simpleTransportationLineDSL.presentation.SimpleTransportationLineDSLEditor"
+            contributorClass="simpleTransportationLineDSL.presentation.SimpleTransportationLineDSLActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
